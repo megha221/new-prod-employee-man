@@ -27,11 +27,11 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        working-directory: frontend
+        working-directory: employee-frontend
         run: npm install
 
       - name: Build React app
-        working-directory: frontend
+        working-directory: employee-frontend
         run: npm run build
 
       - name: Configure AWS credentials
@@ -41,7 +41,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Upload dist to S3
-        run: aws s3 sync frontend/dist s3://${{ secrets.S3_BUCKET }} --delete
+        run: aws s3 sync employee-frontend/dist s3://${{ secrets.S3_BUCKET }} --delete
 
       - name: Invalidate CloudFront cache
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
