@@ -71,6 +71,7 @@ function App() {
       <h1>Employee Management System New Info new</h1>
       <p>manage all new</p>
 
+
       <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
@@ -112,6 +113,7 @@ function App() {
           {editId ? "Update Employee" : "Add Employee"}
         </button>
       </form>
+      <p>List of all employees</p>
 
       <table>
         <thead>
