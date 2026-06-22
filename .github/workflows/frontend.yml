@@ -42,8 +42,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.ROLE_TO_ASSUME }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: arn:aws:iam::109490195201:role/GitHubActionsDeployRole
+          aws-region: us-east-1
 
       - name: Upload dist to S3
         run: aws s3 sync employee-frontend/dist s3://${{ secrets.S3_BUCKET }} --delete
