@@ -69,6 +69,7 @@ function App() {
   return (
     <div className="container">
       <h1>Employee Management System New Info new</h1>
+      <p>manage all</p>
 
       <form onSubmit={handleSubmit} className="form">
         <input
