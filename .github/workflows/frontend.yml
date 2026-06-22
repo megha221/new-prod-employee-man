@@ -26,9 +26,10 @@ jobs:
         with:
           node-version: 20
       - name: check frontend folder
-        pwd
-        ls -la
-        ls -la employee-frontend
+        run: |
+          pwd
+          ls -la
+          ls -la employee-frontend
 
       - name: Install dependencies
         working-directory: employee-frontend
