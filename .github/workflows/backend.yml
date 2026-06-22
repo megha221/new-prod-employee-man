@@ -53,6 +53,6 @@ jobs:
 
             docker run -d \
               --name employee-backend \
-              --env-file /home/ubuntu/backend-app/.env \
+              --env-file /home/ubuntu/employee-backend/.env \
               -p 5001:5001 \
               ${{ env.IMAGE_URI }}
