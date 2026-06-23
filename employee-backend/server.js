@@ -8,7 +8,7 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://dhp70wj2124li.cloudfront.net",
-    "http://employee-frontend-bucket-new.s3-website-us-east-1.amazonaws.com/"
+    "http://employee-frontend-bucket-new.s3-website-us-east-1.amazonaws.com"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
